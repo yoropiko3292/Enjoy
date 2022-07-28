@@ -1,0 +1,39 @@
+body{
+    margin:auto;text-align:center;padding-top: 90px;
+}
+select{
+    width:64vmin;
+}
+input{
+    width:32vmin;
+}
+#stage{
+    background:#00ff00;height:81vmin;width:72vmin;
+}
+#main{
+    background:#ffffff;width:89vmin;margin:auto;text-align:center;padding-top:8vmin;font-size:15px;
+}
+header{
+    width:100%;height:50px;background:#dddddd;padding:20px 50px;
+    box-sizing:border-box;position:fixed;top:0;left:0;align-items:center;
+    display:flex;border:2px double #ff00ff;
+}
+.nowPlay{background:#ddaaaa;bordor:2px solid;width:85vmin;}
+.bg_pattern{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #dddddd;
+    opacity: 0.4;
+    z-index: -1;
+}
+.Isometric{
+    background-image:linear-gradient(30deg,#aaaaaa 12%,transparent 12.5%,transparent 87%,#aaaaaa 87.5%,#aaaaaa),linear-gradient(150deg,#aaaaaa 12%,transparent 12.5%,transparent 87%,#aaaaaa 87.5%,#aaaaaa),linear-gradient(30deg,#aaaaaa 12%,transparent 12.5%,transparent 87%,#aaaaaa 87.5%,#aaaaaa),linear-gradient(150deg,#aaaaaa 12%,transparent 12.5%,transparent 87%,#aaaaaa 87.5%,#aaaaaa),linear-gradient(60deg,#aaaaaa77 25%,transparent 25.5%,transparent 75%,#aaaaaa77 75%,#aaaaaa77),linear-gradient(60deg,#aaaaaa77 25%,transparent 25.5%,transparent 75%,#aaaaaa77 75%,#aaaaaa77);
+    background-size: 40px 70px;
+    background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
+}
+#bg_fillter{
+    width:100vw;height:100vh;background-color:#00000000;position:fixed;top:0;left:0;z-index:-1;
+}
