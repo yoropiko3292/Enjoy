@@ -1,0 +1,39 @@
+<!DOCTYPEhtml>
+    <html lang = 'ja'>
+        <head>
+            <meta charset = 'utf-8'>
+            <title>オセロ</title>
+            <link rel="stylesheet" href="index.css">
+            <style type = 'text/css'>
+
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>オセロゲーム</h1>
+            </header>
+            <div class="bg_pattern Isometric"></div>
+            <div id="bg_fillter"></div>
+            <div id="main">
+                <canvas id="stage" width="320px" height="360px"></canvas>
+                <input type="submit" id = "pass" value = "パスする">
+                <input type="submit" id = "retire" value = "降参する">
+                <p>モードを選んでクリックするとスタート</p>
+                <input type="submit" id = "p1b" value = "1人:先手(黒)">
+                <input type="submit" id = "p1w" value = "1人:後手(白)">
+                <input type="submit" id = "p2" value = "2人対戦">
+                <p>コンピュータの強さ</p>
+                <select name="member" id="difficult">
+                    <option value='1'>簡単</option>
+                    <option value='2'>普通</option>
+                    <option value='3'>難しい</option>
+                    <option value='4' id="superDifficult" disabled>超難しい</option>
+                </select>
+            </div>
+            <script src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="index.js"></script>
+            <script type = "text/javascript">
+
+            </script>
+        </body>
+    </html>
