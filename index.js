@@ -201,7 +201,7 @@ function com() {
                         comChenge += putCheck;
                     }
                 }
-                if (comChenge != "none" && comChenge > 0) {
+                if (comChenge > 0) {
                     comBrain[i][j] = Math.random() * 1000; 
                     comMemory[2] = comBrain[i][j];
                 }
@@ -220,7 +220,7 @@ function com() {
                     }
                 }
                 if (comChenge == 0) {
-                    comChenge = -10000;
+                    comChenge = -100000;
                 }
                 if ((i == 1 && j == 1) || (i == 1 && j == 6) || (i == 6 && j == 1) || (i == 6 && j == 6)) {
                     comChenge -= 100;
