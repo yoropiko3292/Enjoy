@@ -187,7 +187,7 @@ function com() {
     for (i = 0; i < 8; i++) {
         comBrain[i] = new Array(8);
         for (j = 0; j < 8; j++) {
-            comBrain[i][j] = "none";
+            comBrain[i][j] = -100000;
         }
     }
     if (strength == "1") {
@@ -231,7 +231,7 @@ function com() {
                 if ((i == 0 && j == 0) || (i == 0 && j == 7) || (i == 7 && j == 0) || (i == 7 && j == 7)) {
                     comChenge += 100;
                 }
-                if (comChenge != "none") {
+                if (comChenge != -100000) {
                     comBrain[i][j] = comChenge;
                 }
             }
@@ -260,7 +260,7 @@ function com() {
                 if ((i == 0 && j == 0) || (i == 0 && j == 7) || (i == 7 && j == 0) || (i == 7 && j == 7)) {
                     comChenge += 100;
                 }
-                if (comChenge != "none") {
+                if (comChenge != -100000) {
                     comBrain[i][j] = comChenge;
                 }
             }
