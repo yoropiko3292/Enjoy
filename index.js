@@ -163,7 +163,11 @@ function playNext() {
         if ((whichPut == 1 && gameMoad == "black") || (whichPut == -1 && gameMoad == "white") || gameMoad == "both") {
             userSerect = setInterval(playerPut,1);
         } else {
+            retire.disabled = true;
+            pass.disabled = true;
             setTimeout(com,900);
+            retire.disabled = false;
+            pass.disabled = false;
         }
     }
 }
@@ -183,8 +187,6 @@ function skip() {
 //コンピュータ
 
 function com() {
-    retire.disabled = true;
-    pass.disabled = true;
     comMemory = [0,0,0];
     comBrain = new Array(8);
     for (i = 0; i < 8; i++) {
@@ -279,8 +281,6 @@ function com() {
             }
         }
     }
-    retire.disabled = false;
-    pass.disabled = false;
     if (comMemory[2] > -99900) {
         put(comMemory[0],comMemory[1]);
     } else {
