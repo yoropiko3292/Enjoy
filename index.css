@@ -8,7 +8,7 @@ select{
     background:#00ff00;height:81vmin;width:72vmin;
 }
 #main{
-    background:#ffffff;width:89vmin;margin:auto;text-align:center;padding-top:8vmin;font-size:1em;
+    background:#ffffff;width:89vmin;margin:auto;text-align:center;padding-top:8vmin;padding-bottom:10vmin;font-size:1em;
 }
 input{
     width:32vmin;font-size:1.5em;
