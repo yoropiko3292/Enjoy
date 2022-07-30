@@ -2,13 +2,13 @@ body{
     margin:auto;text-align:center;padding-top: 90px;
 }
 select{
-    width:64vmin;
+    width:64vmin;font-size:1em;
 }
 #stage{
     background:#00ff00;height:81vmin;width:72vmin;
 }
 #main{
-    background:#ffffff;width:89vmin;margin:auto;text-align:center;padding-top:8vmin;padding-bottom:10vmin;font-size:1em;
+    background:#ffffff;width:89vmin;margin:auto;text-align:center;padding-top:8vmin;margin-bottom:10vmin;padding-bottom:5vmin;font-size:1em;
 }
 input{
     width:32vmin;font-size:1.5em;
@@ -38,5 +38,5 @@ header{
     width:100vw;height:100vh;background-color:#00000000;position:fixed;top:0;left:0;z-index:-1;
 }
 .btn{
-    width:80vmin;font-size:1.5em;background:#ddddff;
+    width:80vmin;font-size:1.5em;background:#ddddff;margin-top:2.5px;margin-bottom:2.5px;
 }
