@@ -37,3 +37,4 @@ header{
 #bg_fillter{
     width:100vw;height:100vh;background-color:#00000000;position:fixed;top:0;left:0;z-index:-1;
 }
+.btn{width:80vmin;font-size:2em;background:#aaaaff;}
