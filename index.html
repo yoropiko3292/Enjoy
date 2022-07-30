@@ -4,9 +4,6 @@
             <meta charset = 'utf-8'>
             <title>リバーシ(オセロ )</title>
             <link rel="stylesheet" href="index.css">
-            <style type = 'text/css'>
-
-            </style>
         </head>
         <body>
             <header>
@@ -19,9 +16,9 @@
                 <input type="submit" id = "pass" value = "パスする">
                 <input type="submit" id = "retire" value = "降参する">
                 <p>モードを選んでクリックするとスタート</p>
-                <input type="submit" id = "p1b" value = "1人:先手(黒)">
-                <input type="submit" id = "p1w" value = "1人:後手(白)">
-                <input type="submit" id = "p2" value = "2人対戦">
+                <input type="submit" id = "p1b" class="btn" value = "1人:先手(黒)">
+                <input type="submit" id = "p1w" class="btn" value = "1人:後手(白)">
+                <input type="submit" id = "p2" class="btn" value = "2人対戦">
                 <p>コンピュータの強さ</p>
                 <select name="member" id="difficult">
                     <option value='1'>簡単</option>
@@ -30,10 +27,6 @@
                     <option value='4' id="superDifficult" disabled>超難しい</option>
                 </select>
             </div>
-            <script src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
             <script src="index.js"></script>
-            <script type = "text/javascript">
-
-            </script>
         </body>
     </html>
