@@ -8,6 +8,7 @@ const bgf = document.getElementById("bg_fillter");
 const difficult = document.getElementById("difficult");
 const pass = document.getElementById("pass");
 const retire = document.getElementById("retire");
+const comWhere = [[100,-20,20,10,10,20,-20,100],[-20,-100,15,0,0,15,-100,-20],[20,15,20,5,5,20,15,20],[10,0,5,0,0,5,0,10],[10,0,5,0,0,5,0,10],[20,15,20,5,5,20,15,20],[-20,-100,15,0,0,15,-100,-20],[100,-20,20,10,10,20,-20,100]]
 let gameDeta;
 let gameWhite;
 let gameBlack;
@@ -137,9 +138,9 @@ function endSet() {
     }else{
         winner = "none"
     }
-    cvs.fillStyle = "#ffaaaa";
+    cvs.fillStyle = "#ff5555";
     cvs.fillRect(10,10,300,50);
-    cvs.font = "30px serif";
+    cvs.font = "25px serif";
     cvs.textBaseline = "center";
     cvs.textAlign = "center";
     cvs.fillStyle = "#ffffff";
@@ -255,15 +256,26 @@ function com() {
                 }
                 if (comChenge == 0) {
                     comChenge = -100000;
+                }else{
+                    comChenge += comWhere[i][j];
                 }
-                if ((i == 1 && j == 1) || (i == 1 && j == 6) || (i == 6 && j == 1) || (i == 6 && j == 6)) {
-                    comChenge -= 100;
+                if (comChenge != -100000) {
+                    comBrain[i][j] = comChenge;
                 }
-                if ((i == 0 && j == 1) || (i == 0 && j == 6) || (i == 1 && j == 0) || (i == 1 && j == 7) || (i == 6 && j == 0) || (i == 6 && j == 7) || (i == 7 && j == 1) || (i == 7 && j == 6)) {
-                    comChenge -= 20;
+            }
+        }if (strength == "4") {
+        for (i = 0; i < 8 ; i++) {
+            for (j = 0; j < 8 ; j++) {
+                comChenge = 0;
+                for (k = -1 ; k < 2 ; k++) {
+                    for (l = -1 ; l < 2 ; l++) {
+                        putCheck = 0;
+                        revCheck(i,j,k,l);
+                        comChenge += putCheck * (-16.5 + gameBlack + gameWhite);
+                    }
                 }
-                if ((i == 0 && j == 0) || (i == 0 && j == 7) || (i == 7 && j == 0) || (i == 7 && j == 7)) {
-                    comChenge += 100;
+                if (comChenge == 0) {
+                    comChenge = -100000;
                 }
                 if (comChenge != -100000) {
                     comBrain[i][j] = comChenge;
