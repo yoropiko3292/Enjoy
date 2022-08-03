@@ -257,7 +257,29 @@ function com() {
                 if (comChenge == 0) {
                     comChenge = -100000;
                 }else{
-                    comChenge += comWhere[i][j];
+                    comChenge += comWhere[i][j] * (gameBlack + gameWhite) / 100;
+                }
+                if (comChenge != -100000) {
+                    comBrain[i][j] = comChenge;
+                }
+            }
+        }
+    }
+    if (strength == "4") {
+        for (i = 0; i < 8 ; i++) {
+            for (j = 0; j < 8 ; j++) {
+                comChenge = 0;
+                for (k = -1 ; k < 2 ; k++) {
+                    for (l = -1 ; l < 2 ; l++) {
+                        putCheck = 0;
+                        revCheck(i,j,k,l);
+                        comChenge += putCheck * (-16.5 + gameBlack + gameWhite);
+                    }
+                }
+                if (comChenge == 0) {
+                    comChenge = -100000;
+                }else{
+                    comChenge += comWhere[i][j] * (gameBlack + gameWhite) / 100;
                 }
                 if (comChenge != -100000) {
                     comBrain[i][j] = comChenge;
