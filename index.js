@@ -8,7 +8,7 @@ const bgf = document.getElementById("bg_fillter");
 const difficult = document.getElementById("difficult");
 const pass = document.getElementById("pass");
 const retire = document.getElementById("retire");
-const comWhere = [[100,-20,20,10,10,20,-20,100],[-20,-100,15,0,0,15,-100,-20],[20,15,20,5,5,20,15,20],[10,0,5,0,0,5,0,10],[10,0,5,0,0,5,0,10],[20,15,20,5,5,20,15,20],[-20,-100,15,0,0,15,-100,-20],[100,-20,20,10,10,20,-20,100]]
+const comWhere = [[100,-20,10,10,10,10,-20,100],[-20,-100,10,10,10,10,-100,-20],[10,10,10,10,10,10,10,10],[10,10,10,10,10,10,10,10],[10,10,10,10,10,10,10,10],[10,10,10,10,10,10,10,10],[10,-100,10,10,10,10,-100,-20],[100,-20,10,10,10,10,-20,100]]
 let gameDeta;
 let gameWhite;
 let gameBlack;
@@ -282,7 +282,8 @@ function com() {
                     comChenge += comWhere[i][j] * (gameBlack + gameWhite) / 100;
                 }
                 if (comChenge != -100000) {
-                    comBrain[i][j] = comChenge;
+                    comBrain[i][j] = comWhere[i][j] * (gameBlack + gameWhite) / 100;
+                    comBrain[i][j] += comChenge;
                 }
             }
         }
